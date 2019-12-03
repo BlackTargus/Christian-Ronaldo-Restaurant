@@ -32,25 +32,71 @@
     </nav>
 <!-- fin header-->
 <!--Cuerpo -->
-<div class="container-fluid">
+
+<div class="container">
+
   <div class="row">
-    <div class="col mt-4 cuerpoproducto">
-      <h1>Lista de Inventario</h1>
-      <button class="btn btn-primary" href="#">Agregar Nuevo</button>
-      <button class="btn btn-danger">Eliminar</button>
+    <div class="col-5 mt-4 cuerpoproducto">
+      <h1>Inventario</h1>
+      codigo del producto
+      <input class="form-control mt-3" type="text">
+      <button type="button" class="btn btn-success mt-3">Buscar</button>
+    </div>
+
+          <div class="col-7 mt-5">
+            <form class="formulario">
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Codigo</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" >
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Descripcion</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Stock Actual</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Stock Minimo</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Stock Maximo</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Precio</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                  </div>
+          </form>
+              <button type="button" class="btn btn-warning">Editar</button>
+              <button type="button" class="btn btn-primary">Aceptar</button>
+              <button type="button" class="btn btn-danger">Eliminar</button>
+          </div>
+
+  </div>
+
+  <div class="row mt-3">
+    <div class="col">
+      <button type="button" class="btn btn-success" mt-4>Lista de Inventario</button>
     </div>
   </div>
+
+
+
   <div class="row mt-5">
     <div class="col">
       <table border="1px solid black">
         <tr>
-          <th class="list-group-item-dark i">Código</th>
-          <th class="list-group-item-dark i">Descripcion</th>
-          <th class="list-group-item-dark i">Categoría</th>
-          <th class="list-group-item-dark i">Stock Actual</th>
-          <th class="list-group-item-dark i">Stock Minimo</th>
-          <th class="list-group-item-dark i">Stock Maximo</th>
-          <!-- <th class="list-group-item-dark i">Acciones</th> -->
+
+          <td class="list-group-item-dark i">codigo</td>
+          <td class="list-group-item-dark i">Descripcion</td>
+          <td class="list-group-item-dark i">Stock Actual</td>
+          <td class="list-group-item-dark i">Stock Min</td>
+          <td class="list-group-item-dark i">Stock Max</td>
+          <td class="list-group-item-dark i">Precio</td>
+
         </tr>
       </table>
     </div>

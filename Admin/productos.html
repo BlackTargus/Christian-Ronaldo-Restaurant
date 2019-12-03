@@ -34,26 +34,79 @@
 <!--Cuerpo -->
 <div class="container">
   <div class="row">
-    <div class="col mt-4 cuerpoproducto">
-      <h1>Lista de Productos</h1>
-      <a href="nuevoProducto.html" target="_blank"><span class="badge badge-success">Agregar Nuevo Producto</span></a>
+    <div class="col-5 mt-4 cuerpoproducto">
+      <h1>Productos del Menu</h1>
+      codigo del producto
+      <input class="form-control mt-3" type="text">
+      <button type="button" class="btn btn-success mt-3">Buscar</button>
+    </div>
+
+          <div class="col-7 mt-5">
+                <form class="formulario">
+                  <div class="row mt-3">
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="exampleFormControlInput1">Codigo </label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="exampleFormControlInput1">Nombre</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Descripcion</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Categoria</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Desayuno</option>
+                    <option>Almuerzo</option>
+                    <option>Cena</option>
+                    <option>Postre</option>
+                    <option>Bebidas</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Precio de Unidad</label>
+                  <input type="text" class="form-control" id="exampleFormControlInput1">
+                </div>
+              </form>
+              <button type="button" class="btn btn-warning">Editar</button>
+              <button type="button" class="btn btn-primary">Aceptar</button>
+              <button type="button" class="btn btn-danger">Eliminar</button>
+          </div>
+
+  </div>
+
+  <div class="row mt-3">
+    <div class="col">
+      <button type="button" class="btn btn-success" mt-4>Lista de productos</button>
     </div>
   </div>
+
+
   <div class="row mt-5">
     <div class="col">
       <table border="1px solid black">
         <tr>
-          <th class="list-group-item-dark">Codigo</th>
-          <th class="list-group-item-dark">Nombre</th>
-          <th class="list-group-item-dark">Descripcion</th>
-          <th class="list-group-item-dark">Categoria</th>
-          <th class="list-group-item-dark">Precio</th>
-          <th class="list-group-item-dark">Acciones</th>
+          <td class="list-group-item-dark">Codigo</td>
+          <td class="list-group-item-dark">Nombre</td>
+          <td class="list-group-item-dark">Descripcion</td>
+          <td class="list-group-item-dark">Categoria</td>
+          <td class="list-group-item-dark">Precio</td>
         </tr>
       </table>
     </div>
   </div>
+
 </div>
+
+
 <!--Fin Cuerpo -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
