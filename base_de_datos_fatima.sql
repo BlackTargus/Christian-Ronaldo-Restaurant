@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 03-12-2019 a las 05:21:55
+-- Tiempo de generación: 03-12-2019 a las 06:38:26
 -- Versión del servidor: 5.7.26
 -- Versión de PHP: 7.2.18
 
@@ -346,13 +346,25 @@ CREATE TABLE IF NOT EXISTS `tpedidos` (
 
 DROP TABLE IF EXISTS `tproducto`;
 CREATE TABLE IF NOT EXISTS `tproducto` (
-  `Cod_Producto` varchar(10) NOT NULL,
+  `Cod_Producto` varchar(32) NOT NULL,
   `Nombre_Producto` varchar(50) NOT NULL,
   `Descripcion_P` varchar(300) NOT NULL,
   `Categoria` varchar(15) NOT NULL,
   `Precio_Unidad` int(4) NOT NULL,
   PRIMARY KEY (`Cod_Producto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `tproducto`
+--
+
+INSERT INTO `tproducto` (`Cod_Producto`, `Nombre_Producto`, `Descripcion_P`, `Categoria`, `Precio_Unidad`) VALUES
+('ensalada_1', 'Ensalada de atun fria con pasta tornillo', 'Ensalada de atun fria con pasta tornillo, ideal para un almuerzo ligero.', 'Comida', 9),
+('pasticho_1', 'Pasticho de Carne', 'Pasticho de Carne,Rico para tu almuerzo y enamorar tu paladar al estilo italiano con el sabor de nuestra tierra.', 'Comida', 15),
+('sandwich_1', 'Sandwich Integral con Huevos ', 'Sandwich Integral con Huevos, para un desayuno balanceado y saludable.', 'Comida', 6),
+('tortilla_1', 'Tortilla de papa y cebolla', 'Tortilla de papa y cebolla rica y nutritiva', 'Comida', 5),
+('tortitas_1', 'Tortitas de lentejas, arroz y queso', 'Tortitas de lentejas, arroz y queso muy reconocidas por interesante composicion.', 'Comida', 12),
+('waffles_1', 'Waffles de Avena', 'Waffles de Avena, a quien no le gustarian unos waffles saludables ?', 'Comida', 10);
 
 -- --------------------------------------------------------
 
