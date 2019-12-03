@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 03-12-2019 a las 06:38:26
+-- Tiempo de generación: 03-12-2019 a las 07:09:49
 -- Versión del servidor: 5.7.26
 -- Versión de PHP: 7.2.18
 
@@ -30,14 +30,20 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `tacceso`;
 CREATE TABLE IF NOT EXISTS `tacceso` (
-  `ID_acceso` varchar(32) NOT NULL,
+  `ID_acceso` int(11) NOT NULL AUTO_INCREMENT,
   `login_acceso` varchar(32) NOT NULL,
   `clave_acceso` varchar(32) NOT NULL,
   `nivel_acceso` varchar(1) NOT NULL,
-  `cookie` varchar(32) NOT NULL,
-  `fecha` date NOT NULL,
+  `cookie` varchar(32) DEFAULT NULL,
   PRIMARY KEY (`ID_acceso`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `tacceso`
+--
+
+INSERT INTO `tacceso` (`ID_acceso`, `login_acceso`, `clave_acceso`, `nivel_acceso`, `cookie`) VALUES
+(1, 'black', 'black', '1', NULL);
 
 -- --------------------------------------------------------
 
@@ -318,7 +324,7 @@ CREATE TABLE IF NOT EXISTS `tnomina_pago` (
   `Bonos` int(10) NOT NULL,
   `Total_Asignaciones` int(15) NOT NULL,
   `Pago_Total` int(15) NOT NULL,
-  PRIMARY KEY (`Cod_Nomina`,`ID_Empleado`),
+  PRIMARY KEY (`Cod_Nomina`),
   KEY `ID_Empleado` (`ID_Empleado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
